@@ -7,11 +7,15 @@ const Layout = function() {
     const search = document.createElement("div");
     search.setAttribute("id", "search-bar");
 
+    const current = document.createElement("div");
+    current.setAttribute("id", "current");
+
     const forecast = document.createElement("div");
     forecast.setAttribute("id", "forecast");
 
     parent.appendChild(title);
     parent.appendChild(search);
+    parent.appendChild(current);
     parent.appendChild(forecast);
 
 }

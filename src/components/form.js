@@ -1,4 +1,4 @@
-import { getCity, setCity } from "../modules/city";
+import { getCity } from "../modules/city";
 import Refresh from "../modules/refresh";
 
 const Form = async function () {
@@ -9,7 +9,7 @@ const Form = async function () {
   const input = document.createElement("input");
   input.setAttribute("type", "text");
   input.setAttribute("id", "city-input");
-  input.setAttribute("placeholder", "e.g. Austin");
+  input.setAttribute("placeholder", "Example: Austin");
 
   const submit = document.createElement("button");
   submit.setAttribute("type", "submit");
@@ -18,16 +18,13 @@ const Form = async function () {
 
   submit.addEventListener("click", async (e) => {
     e.preventDefault();
-    Refresh("loading...");
     const newCity = getCity();
+    console.log(newCity);
     if (newCity === "") {
       return;
     }
-    const tempPromise = setCity(newCity);
-    const t = await tempPromise;
-    Refresh(t);
+    Refresh(newCity);
     form.reset();
-    input.setAttribute("placeholder", newCity);
 })
 
   parent.appendChild(form);

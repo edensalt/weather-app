@@ -1,4 +1,4 @@
-import getWeather from "./weather";
+import getWeather from "./current-weather";
 
 function getCity() {
     const input = document.querySelector("#city-input");
