@@ -14,6 +14,7 @@ const InitWeather = function (city) {
     })
     .then(parent.appendChild(weather))
     .catch((error) => {
+      weather.innerHTML = `Error: ${error}`
       console.log(error);
     });
 
@@ -29,6 +30,7 @@ const InitWeather = function (city) {
   })
   .then(forecastParent.appendChild(today))
   .catch((error) => {
+    today.innerHTML = `Error: ${error}`
     console.log(error);
   });
 
@@ -42,6 +44,7 @@ const InitWeather = function (city) {
   })
   .then(forecastParent.appendChild(tomorrow))
   .catch((error) => {
+    tomorrow.innerHTML = `Error: ${error}`
     console.log(error);
   });
 
@@ -55,6 +58,7 @@ const InitWeather = function (city) {
   })
   .then(forecastParent.appendChild(nextDay))
   .catch((error) => {
+    nextDay.innerHTML = `Error: ${error}`
     console.log(error);
   });
 
