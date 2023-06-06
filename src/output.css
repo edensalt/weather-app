@@ -37,24 +37,24 @@ body {
 .header h1 {
   color: blue;
 }
-.header .city {
+.header .city-div {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
 }
-.header .city .location {
+.header .city-div .location {
   display: flex;
   align-items: baseline;
   padding: 5px;
 }
-.header .city .location h1 {
+.header .city-div .location h1 {
   margin: 0;
   font-size: 3rem;
   padding: 0 1rem;
 }
-.header .city .location h2 {
+.header .city-div .location h2 {
   margin: 0;
 }
 

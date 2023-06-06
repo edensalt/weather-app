@@ -1,4 +1,5 @@
-import getWeather from "../modules/current-weather";
+import getWeather from "../modules/weather-data";
+import RefreshLocation from "../modules/location-refresh";
 
 const InitWeather = function (city) {
   const parent = document.querySelector("#current");
@@ -6,7 +7,9 @@ const InitWeather = function (city) {
   const weather = document.createElement("div");
   weather.setAttribute("id", "temp");
 
-  weather.innerHTML = "loading...";
+  weather.innerHTML = "Loading...";
+
+  RefreshLocation(city);
 
   getWeather(city)
     .then((value) => {
@@ -14,7 +17,7 @@ const InitWeather = function (city) {
     })
     .then(parent.appendChild(weather))
     .catch((error) => {
-      weather.innerHTML = `Error: ${error}`
+      weather.innerHTML = `Error: ${error}`;
       console.log(error);
     });
 
@@ -25,43 +28,42 @@ const InitWeather = function (city) {
   today.innerHTML = "loading...";
 
   getWeather(city)
-  .then((value) => {
-    today.innerHTML = `Average temp for today, ${value.forecast.forecastday[0].date}, will be ${value.forecast.forecastday[0].day.avgtemp_f}°F`;
-  })
-  .then(forecastParent.appendChild(today))
-  .catch((error) => {
-    today.innerHTML = `Error: ${error}`
-    console.log(error);
-  });
+    .then((value) => {
+      today.innerHTML = `Average temp for today, ${value.forecast.forecastday[0].date}, will be ${value.forecast.forecastday[0].day.avgtemp_f}°F`;
+    })
+    .then(forecastParent.appendChild(today))
+    .catch((error) => {
+      today.innerHTML = `Error: ${error}`;
+      console.log(error);
+    });
 
   const tomorrow = document.createElement("div");
   tomorrow.setAttribute("id", "tomorrow");
   tomorrow.innerHTML = "loading...";
 
   getWeather(city)
-  .then((value) => {
-    tomorrow.innerHTML = `Average temp for tomorrow, ${value.forecast.forecastday[1].date}, will be ${value.forecast.forecastday[1].day.avgtemp_f}°F`;
-  })
-  .then(forecastParent.appendChild(tomorrow))
-  .catch((error) => {
-    tomorrow.innerHTML = `Error: ${error}`
-    console.log(error);
-  });
+    .then((value) => {
+      tomorrow.innerHTML = `Average temp for tomorrow, ${value.forecast.forecastday[1].date}, will be ${value.forecast.forecastday[1].day.avgtemp_f}°F`;
+    })
+    .then(forecastParent.appendChild(tomorrow))
+    .catch((error) => {
+      tomorrow.innerHTML = `Error: ${error}`;
+      console.log(error);
+    });
 
   const nextDay = document.createElement("div");
   nextDay.setAttribute("id", "next-day");
   nextDay.innerHTML = "loading...";
 
   getWeather(city)
-  .then((value) => {
-    nextDay.innerHTML = `Average temp in two days, ${value.forecast.forecastday[2].date}, will be ${value.forecast.forecastday[2].day.avgtemp_f}°F`;
-  })
-  .then(forecastParent.appendChild(nextDay))
-  .catch((error) => {
-    nextDay.innerHTML = `Error: ${error}`
-    console.log(error);
-  });
-
+    .then((value) => {
+      nextDay.innerHTML = `Average temp in two days, ${value.forecast.forecastday[2].date}, will be ${value.forecast.forecastday[2].day.avgtemp_f}°F`;
+    })
+    .then(forecastParent.appendChild(nextDay))
+    .catch((error) => {
+      nextDay.innerHTML = `Error: ${error}`;
+      console.log(error);
+    });
 };
 
 export default InitWeather;

@@ -8,15 +8,16 @@ const Layout = function() {
     title.innerHTML = "Weather App";
 
     const cityDiv = document.createElement("div");
-    cityDiv.classList.add("city");
+    cityDiv.classList.add("city-div");
 
     const location = document.createElement("div");
     location.classList.add("location");
 
     const city = document.createElement("h1");
-    city.innerHTML = "AUSTIN";
+    city.setAttribute("id", "city");
 
     const state = document.createElement("h2");
+    state.setAttribute("id", "state");
     state.innerHTML = "Texas";
     
     const search = document.createElement("div");

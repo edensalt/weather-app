@@ -1,4 +1,5 @@
 import { setCity } from "./city";
+import RefreshLocation from "./location-refresh";
 
 const Refresh = async function(newCity) {
     const input = document.querySelector("#city-input")
@@ -10,6 +11,7 @@ const Refresh = async function(newCity) {
 
     temp.innerHTML = `${data.current.temp_f}°F`;
     input.setAttribute("placeholder", newCity);
+    RefreshLocation(newCity);
 
 }
 
