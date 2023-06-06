@@ -1,12 +1,14 @@
 import getWeather from "../modules/weather-data";
 import RefreshLocation from "../modules/location-refresh";
 import RefreshCurrentWeather from "../modules/current-refresh";
+import RefreshCurrentDate from "../modules/date-refresh";
 
 const InitWeather = async function (city) {
 
   try {
     RefreshLocation(city);
     RefreshCurrentWeather(city);
+    RefreshCurrentDate(city);
   
     const forecastParent = document.querySelector("#forecast");
   

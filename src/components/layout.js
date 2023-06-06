@@ -33,6 +33,9 @@ const Layout = function() {
     
         const currentDate = document.createElement("div");
         currentDate.setAttribute("id", "current-date");
+
+        const dateUpdate = document.createElement("div");
+        dateUpdate.innerHTML = "Last updated:";
     
         const forecast = document.createElement("div");
         forecast.setAttribute("id", "forecast");
@@ -47,6 +50,7 @@ const Layout = function() {
         parent.appendChild(current);
         current.appendChild(currentWeather);
         current.appendChild(currentDate);
+        currentDate.appendChild(dateUpdate);
         parent.appendChild(forecast);
         resolve();
         

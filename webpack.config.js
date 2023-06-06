@@ -12,6 +12,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Weather App",
     }),
+ 
   ],
   output: {
     filename: "bundle.js",
