@@ -1,25 +1,11 @@
 import getWeather from "../modules/weather-data";
 import RefreshLocation from "../modules/location-refresh";
+import RefreshCurrentWeather from "../modules/current-refresh";
 
 const InitWeather = function (city) {
-  const parent = document.querySelector("#current");
-
-  const weather = document.createElement("div");
-  weather.setAttribute("id", "temp");
-
-  weather.innerHTML = "Loading...";
 
   RefreshLocation(city);
-
-  getWeather(city)
-    .then((value) => {
-      weather.innerHTML = `${value.current.temp_f}°F`;
-    })
-    .then(parent.appendChild(weather))
-    .catch((error) => {
-      weather.innerHTML = `Error: ${error}`;
-      console.log(error);
-    });
+  RefreshCurrentWeather(city);
 
   const forecastParent = document.querySelector("#forecast");
 

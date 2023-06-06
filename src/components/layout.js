@@ -26,6 +26,12 @@ const Layout = function() {
     const current = document.createElement("div");
     current.setAttribute("id", "current");
 
+    const currentWeather = document.createElement("div");
+    currentWeather.setAttribute("id", "current-weather");
+
+    const currentDate = document.createElement("div");
+    currentDate.setAttribute("id", "current-date");
+
     const forecast = document.createElement("div");
     forecast.setAttribute("id", "forecast");
 
@@ -37,6 +43,8 @@ const Layout = function() {
     location.appendChild(state);
     cityDiv.appendChild(search);
     parent.appendChild(current);
+    current.appendChild(currentWeather);
+    current.appendChild(currentDate);
     parent.appendChild(forecast);
 
 }
