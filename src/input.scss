@@ -93,16 +93,17 @@ body {
 
 #current-weather {
   display: grid;
+  max-width: 550px;
   width: 50%;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(9, minmax(50px, 1fr));
   grid-template-rows: repeat(4, 1fr);
 
   #icon {
-    grid-area: 1 / 1 / 5 / 2;
+    grid-area: 1 / 1 / 5 / 3;
     justify-self: center;
     align-self: center;
-    height: 8rem;
-    width: 8rem;
+    height: 100%;
+    width: 100%;
     border: solid bisque 1px;
     display: flex;
     justify-content: center;
@@ -110,28 +111,28 @@ body {
   }
 
   #temp {
-    font-size: 8rem;
-    grid-area: 1 / 2 / 5 / 6;
+    font-size: 6rem;
+    grid-area: 1 / 3 / 5 / 7;
     justify-self: center;
     align-self: center;
   }
 
   #fahrenheit {
-    grid-area: 1 / 6 / 3 / 7;
-    font-size: 2rem;
-    justify-self: start;
-    align-self: end;
-  }
-
-  #celsius {
     grid-area: 1 / 7 / 3 / 8;
     font-size: 2rem;
     justify-self: start;
     align-self: end;
   }
 
+  #celsius {
+    grid-area: 1 / 8 / 3 / 9;
+    font-size: 2rem;
+    justify-self: start;
+    align-self: end;
+  }
+
   #description {
-    grid-area: 3 / 6 / 4 / 9;
+    grid-area: 3 / 7 / 4 / 10;
     justify-self: start;
     align-self: center;
   }
