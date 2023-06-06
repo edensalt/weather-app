@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+input,
+button {
+  /* Resetting border, padding, and background styles */
+  border: none;
+  padding: 0;
+  background: none;
+  /* Resetting font styles */
+  font-family: inherit;
+  font-size: inherit;
+  /* Resetting box-sizing to avoid unexpected sizing */
+  box-sizing: border-box;
+  /* Resetting appearance styles (for some browsers) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Resetting cursor style */
+  cursor: pointer;
+  /* Resetting outline style */
+  outline: none;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(176, 216, 159);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header h1 {
+  color: blue;
+}
+.header .city {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.header .city .location {
+  display: flex;
+  align-items: baseline;
+  padding: 5px;
+}
+.header .city .location h1 {
+  margin: 0;
+  font-size: 3rem;
+  padding: 0 1rem;
+}
+.header .city .location h2 {
+  margin: 0;
+}
+
+#search-bar form {
+  display: flex;
+  gap: 5px;
+}
+#search-bar form #city-input {
+  background: rgba(255, 255, 255, 0.3137254902);
+  padding: 3px 5px;
+  color: black;
+  border-radius: 5px;
+}
+#search-bar form #city-submit {
+  background: #000;
+  border-radius: 5px;
+  color: white;
+  padding: 3px 5px;
+}
+
+/*# sourceMappingURL=output.css.map */

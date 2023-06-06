@@ -9,12 +9,12 @@ const Form = async function () {
   const input = document.createElement("input");
   input.setAttribute("type", "text");
   input.setAttribute("id", "city-input");
-  input.setAttribute("placeholder", "Example: Austin");
+  input.setAttribute("placeholder", "Enter new city");
 
   const submit = document.createElement("button");
   submit.setAttribute("type", "submit");
   submit.setAttribute("id", "city-submit");
-  submit.innerHTML = "Generate";
+  submit.innerHTML = "Search";
 
   submit.addEventListener("click", async (e) => {
     e.preventDefault();

@@ -5,6 +5,7 @@ const getWeather = async function (city) {
       { mode: "cors" }
     );
     const data = await response.json()
+    console.log(data);
     return data;
   } catch (err) {
     console.log(err);
