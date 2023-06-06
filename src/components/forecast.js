@@ -1,10 +1,12 @@
 import getWeather from "../modules/weather";
 
-const Weather = function (city) {
-  const parent = document.querySelector("#parent");
+const InitWeather = function (city) {
+  const parent = document.querySelector("#forecast");
 
   const weather = document.createElement("div");
   weather.setAttribute("id", "temp");
+
+  weather.innerHTML = 'loading...';
 
   getWeather(city)
     .then((value) => {
@@ -14,4 +16,4 @@ const Weather = function (city) {
     .catch((error) => {console.log(error)});
 };
 
-export default Weather;
+export default InitWeather;

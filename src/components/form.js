@@ -2,7 +2,7 @@ import { getCity, setCity } from "../modules/city";
 import Refresh from "../modules/refresh";
 
 const Form = async function () {
-  const parent = document.querySelector("#parent");
+  const parent = document.querySelector("#search-bar");
 
   const form = document.createElement("form");
 
@@ -18,7 +18,11 @@ const Form = async function () {
 
   submit.addEventListener("click", async (e) => {
     e.preventDefault();
+    Refresh("loading...");
     const newCity = getCity();
+    if (newCity === "") {
+      return;
+    }
     const tempPromise = setCity(newCity);
     const t = await tempPromise;
     Refresh(t);

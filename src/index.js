@@ -1,5 +1,6 @@
-import Weather from "./components/display";
+import InitWeather from "./components/forecast";
 import Form from "./components/form";
+import Layout from "./components/layout";
 import "./style.css";
 
 function setContentParent() {
@@ -10,5 +11,6 @@ function setContentParent() {
 
 document.body.appendChild(setContentParent());
 
+Layout();
 Form();
-Weather('Austin');
+InitWeather('Austin');
