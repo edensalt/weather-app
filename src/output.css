@@ -151,4 +151,10 @@ body {
   font-size: 20px;
 }
 
+#forecast {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=output.css.map */
