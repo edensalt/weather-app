@@ -4,12 +4,19 @@ import { format, parse } from "date-fns";
 const CurrentDateLayout = async function () {
   const parent = document.querySelector("#current-date");
 
+  parent.innerHTML = "";
+
+  const dateUpdate = document.createElement("div");
+  dateUpdate.innerHTML = "Last updated:";
+  dateUpdate.classList.add("italic-text");
+
   const dayTime = document.createElement("div");
   dayTime.setAttribute("id", "day-time");
 
   const date = document.createElement("div");
   date.setAttribute("id", "date");
 
+  parent.appendChild(dateUpdate);
   parent.appendChild(dayTime);
   parent.appendChild(date);
 };
@@ -24,7 +31,7 @@ const DateReformat = function (date) {
 const Time = function (date) {
   const dateString = date;
   const dateObj = parse(dateString, "yyyy-MM-dd HH:mm", new Date());
-  const formattedDate = format(dateObj, "h:mm aaaa");
+  const formattedDate = format(dateObj, "h:mm aaa");
   return formattedDate;
 };
 
@@ -47,7 +54,7 @@ const RefreshCurrentDate = async function (city) {
   getWeather(city)
     .then((value) => {
       const dateInput = value.current.last_updated;
-      const lineOne = `${DayOfWeek(dateInput)} ${Time(dateInput)} local time`;
+      const lineOne = `${DayOfWeek(dateInput)} ${Time(dateInput)}`;
       const lineTwo = `${DateReformat(dateInput)}`;
       dayTime.innerHTML = lineOne;
       date.innerHTML = lineTwo;
