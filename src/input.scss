@@ -363,3 +363,14 @@ body {
     color: rgb(176, 216, 159);
   }
 }
+
+$max-container-width: 1000px;
+
+@media (min-width: 1000px) {
+  .header,
+  #current,
+  #forecast {
+    padding-left: calc((100vw - #{$max-container-width}) / 2);
+    padding-right: calc((100vw - #{$max-container-width}) / 2);
+  }
+}

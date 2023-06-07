@@ -6,7 +6,7 @@ Weather app for the <a href="https://www.theodinproject.com/lessons/node-path-ja
 
 - API requests
 - JS promises (async/await, .then/.catch, try/catch)
-- Sass for styling, CSS loading animations
+- Sass for styling (media queries and calc()), CSS loading animations (keyframes)
 - date-fns for date formatting
 - JS ES6 Modules, imports and exports
 - DOM manipulation
@@ -17,3 +17,5 @@ Weather app for the <a href="https://www.theodinproject.com/lessons/node-path-ja
 - Display the local time, current weather, and 3-day forecast from any city by typing the city name into the search bar.
 - Alternate between fahrenheit and celsius.
 - Receive an error if the city entered does not exist.
+- Consistent app display for x-large screens
+  - <i>Note: app not yet responsive for mobile</i>
