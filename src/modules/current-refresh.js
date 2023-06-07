@@ -62,7 +62,6 @@ const RefreshCurrentWeather = async function (city, measurement) {
         description.innerHTML = `${value.current.condition.text}, feels like ${value.current.feelslike_f}°F.`;
       }
     })
-    // .then(parent.appendChild(temp))
     .catch((error) => {
       temp.innerHTML = `Error: ${error}`;
       console.debug(error);

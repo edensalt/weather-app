@@ -118,7 +118,6 @@ const RefreshForecast = async function (city, measurement) {
           hl.innerHTML = `${value.forecast.forecastday[day].day.maxtemp_f}°F <span class="low">/ ${value.forecast.forecastday[day].day.mintemp_f}°F</span>`;
         }
       })
-      // .then(parent.appendChild(temp))
       .catch((error) => {
         description.innerHTML = `Error: ${error}`;
         console.debug(error);
