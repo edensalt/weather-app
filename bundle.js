@@ -8186,7 +8186,7 @@ const getWeather = async function (city) {
   \*****************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "f60eca1dfc1873a6a652.png";
+module.exports = __webpack_require__.p + "images/load.png";
 
 /***/ }),
 
