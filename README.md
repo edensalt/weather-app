@@ -6,7 +6,7 @@ Weather app for the <a href="https://www.theodinproject.com/lessons/node-path-ja
 
 - API requests
 - JS promises (async/await, .then/.catch)
-- Sass for styling
+- Sass for styling, CSS loading animations
 - date-fns for date formatting
 - JS ES6 Modules, imports and exports
 - DOM manipulation
