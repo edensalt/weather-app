@@ -15,7 +15,7 @@ const RefreshLocation = async function (city) {
       })
       .catch((error) => {
         cityLabel.innerHTML = `Error: ${error}`;
-        console.log(error);
+        console.debug(error);
       });
   
     getWeather(city)
@@ -24,7 +24,7 @@ const RefreshLocation = async function (city) {
       })
       .catch((error) => {
         stateLabel.innerHTML = `Error: ${error}`;
-        console.log(error);
+        console.debug(error);
       });
   };
 

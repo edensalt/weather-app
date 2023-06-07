@@ -14,7 +14,7 @@ const setTemp = async function(temp) {
         parent.setAttribute("temp", temp)
     }
     catch (error) {
-        console.log(error)
+        console.debug(error)
     }
 };
 

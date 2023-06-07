@@ -16,7 +16,7 @@ const setCity = async function() {
         return temp;
     }
     catch (error) {
-        console.log(error)
+        console.debug(error)
     }
 };
 

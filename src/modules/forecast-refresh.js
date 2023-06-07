@@ -121,7 +121,7 @@ const RefreshForecast = async function (city, measurement) {
       // .then(parent.appendChild(temp))
       .catch((error) => {
         description.innerHTML = `Error: ${error}`;
-        console.log(error);
+        console.debug(error);
       });
   }
 };

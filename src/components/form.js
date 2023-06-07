@@ -20,7 +20,6 @@ const Form = async function () {
     submit.addEventListener("click", async (e) => {
       e.preventDefault();
       const newCity = getCity();
-      console.log(newCity);
       if (newCity === "") {
         return;
       }

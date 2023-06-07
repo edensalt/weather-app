@@ -65,7 +65,7 @@ const RefreshCurrentWeather = async function (city, measurement) {
     // .then(parent.appendChild(temp))
     .catch((error) => {
       temp.innerHTML = `Error: ${error}`;
-      console.log(error);
+      console.debug(error);
     });
 };
 

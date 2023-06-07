@@ -18,5 +18,5 @@ Layout().then(() => {
 }).then(() => {
   return InitWeather("Austin");
 }).catch((error) => {
-  console.log(error);
+  console.debug(error);
 });

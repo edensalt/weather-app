@@ -14,7 +14,7 @@ const InitWeather = async function (city) {
     RefreshCurrentDate(city);
     RefreshForecast(city, measurement);
   } catch (error) {
-    console.log(error);
+    console.debug(error);
     throw error;
   }
 };
