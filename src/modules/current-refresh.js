@@ -2,7 +2,7 @@ import getWeather from "./weather-data";
 import load from "../images/load.png";
 import GenerateButtons from "../components/buttons";
 
-const CurrentWeatherLayout = async function () {
+const CurrentWeatherLayout = async function (measurement) {
   const parent = document.querySelector("#current-weather");
 
   parent.innerHTML = "";
@@ -21,7 +21,7 @@ const CurrentWeatherLayout = async function () {
   endInfo.setAttribute("id", "temp-info");
 
   const buttons = document.createElement("div");
-  buttons.setAttribute("id", "temp-btns");
+  buttons.classList.add("temp-btns");
 
   const description = document.createElement("div");
   description.setAttribute("id", "description");
@@ -31,12 +31,12 @@ const CurrentWeatherLayout = async function () {
   icon.appendChild(img);
   parent.appendChild(endInfo);
   endInfo.appendChild(buttons);
-  GenerateButtons();
+  GenerateButtons(measurement);
   endInfo.appendChild(description);
 };
 
-const RefreshCurrentWeather = async function (city) {
-  await CurrentWeatherLayout();
+const RefreshCurrentWeather = async function (city, measurement) {
+  await CurrentWeatherLayout(measurement);
 
   const img = document.querySelector("#icon-img");
   const temp = document.querySelector("#temp");
@@ -51,11 +51,16 @@ const RefreshCurrentWeather = async function (city) {
 
   getWeather(city)
     .then((value) => {
-      temp.innerHTML = value.current.temp_f;
       img.src = value.current.condition.icon;
       img.classList.remove("loading");
-      description.innerHTML = `${value.current.condition.text}, feels like ${value.current.feelslike_f}°F.`;
-      console.log(icon.src);
+      if (measurement === "celsius") {
+        temp.innerHTML = value.current.temp_c;
+        description.innerHTML = `${value.current.condition.text}, feels like ${value.current.feelslike_c}°C.`;
+
+      } else {
+        temp.innerHTML = value.current.temp_f;
+        description.innerHTML = `${value.current.condition.text}, feels like ${value.current.feelslike_f}°F.`;
+      }
     })
     // .then(parent.appendChild(temp))
     .catch((error) => {

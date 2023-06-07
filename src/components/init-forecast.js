@@ -6,10 +6,14 @@ import RefreshForecast from "../modules/forecast-refresh";
 
 const InitWeather = async function (city) {
   try {
+
+    const parent = document.querySelector("#parent");
+    const measurement = parent.getAttribute("temp");
+
     RefreshLocation(city);
-    RefreshCurrentWeather(city);
+    RefreshCurrentWeather(city, measurement);
     RefreshCurrentDate(city);
-    RefreshForecast(city);
+    RefreshForecast(city, measurement);
   } catch (error) {
     console.log(error);
     throw error;

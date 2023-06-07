@@ -79,7 +79,7 @@ const DateReformat = function (date) {
   return formattedDate;
 };
 
-const RefreshForecast = async function (city) {
+const RefreshForecast = async function (city, measurement) {
   await ForecastLayout();
 
   for (let i = 0; i < 3; i++) {
@@ -108,11 +108,15 @@ const RefreshForecast = async function (city) {
         date.innerHTML = DateReformat(forecastDate);
         img.src = value.forecast.forecastday[day].day.condition.icon;
         img.classList.remove("loading");
-        hl.innerHTML = `${value.forecast.forecastday[day].day.maxtemp_f}°F <span class="low">/ ${value.forecast.forecastday[day].day.mintemp_f}°F</span>`;
         description.innerHTML =
           value.forecast.forecastday[day].day.condition.text;
         sunrise.innerHTML = value.forecast.forecastday[day].astro.sunrise;
         sunset.innerHTML = value.forecast.forecastday[day].astro.sunset;
+        if (measurement === "celsius") {
+          hl.innerHTML = `${value.forecast.forecastday[day].day.maxtemp_c}°C <span class="low">/ ${value.forecast.forecastday[day].day.mintemp_c}°C</span>`;
+        } else {
+          hl.innerHTML = `${value.forecast.forecastday[day].day.maxtemp_f}°F <span class="low">/ ${value.forecast.forecastday[day].day.mintemp_f}°F</span>`;
+        }
       })
       // .then(parent.appendChild(temp))
       .catch((error) => {

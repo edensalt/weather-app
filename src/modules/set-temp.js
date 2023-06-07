@@ -1,12 +1,12 @@
 function getTemp() {
     const parent = document.querySelector("#parent");
-    const currentTemp = parent.temp;
+    const currentTemp = parent.getAttribute("temp");
     return currentTemp;
 }
 
 const setTemp = async function(temp) {
     try {
-        const currentTemp = await getTemp();
+        const currentTemp = getTemp();
         if (currentTemp === temp) {
            return;
         }
