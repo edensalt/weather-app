@@ -1,3 +1,5 @@
+import Footer from "./footer";
+
 const Layout = function() {
 
     return new Promise((resolve, reject) => {
@@ -48,6 +50,7 @@ const Layout = function() {
         current.appendChild(currentWeather);
         current.appendChild(currentDate);
         parent.appendChild(forecast);
+        Footer();
         resolve();
         
         reject(new Error("Layout error"))

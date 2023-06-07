@@ -6,6 +6,7 @@
 
 body {
   background-color: rgb(247, 251, 255);
+  position: relative;
 }
 
 input,
@@ -294,6 +295,29 @@ body {
 
 .dot-3 {
   animation-delay: 0.4s;
+}
+
+#footer {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  height: 30px;
+  transform: translateY(40px);
+}
+#footer #github-logo {
+  height: 30px;
+  margin-right: 10px;
+}
+#footer #username > a {
+  text-decoration: none;
+}
+#footer #username:hover > a {
+  cursor: pointer;
+  color: rgb(176, 216, 159);
 }
 
 /*# sourceMappingURL=output.css.map */
