@@ -11,3 +11,8 @@ Weather app for the <a href="https://www.theodinproject.com/lessons/node-path-ja
 - JS ES6 Modules, imports and exports
 - DOM manipulation
 - Webpack, JSON and NPM
+
+## Features
+
+- Display the local time, current weather, and 3-day forecast from any city by typing the city name into the search bar.
+- Alternate between fahrenheit and celsius.

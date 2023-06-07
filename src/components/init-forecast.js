@@ -1,4 +1,3 @@
-import getWeather from "../modules/weather-data";
 import RefreshLocation from "../modules/location-refresh";
 import RefreshCurrentWeather from "../modules/current-refresh";
 import RefreshCurrentDate from "../modules/date-refresh";

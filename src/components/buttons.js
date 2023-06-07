@@ -28,7 +28,6 @@ const GenerateButtons = async function (measurement) {
 
     const select = document.getElementById(measurement);
     select.className= "temp-focus";
-    console.log(select);
 
     let other;
     if (measurement === "celsius") {
@@ -38,7 +37,6 @@ const GenerateButtons = async function (measurement) {
 
     const unselect = document.getElementById(other);
     unselect.className= "temp-unfocus";
-    console.log(unselect);
   };
 
   export default GenerateButtons;

@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: default;
 }
 
 body {
@@ -73,6 +74,34 @@ body {
   padding: 3px 5px;
   color: black;
   border-radius: 5px;
+  position: relative;
+}
+#search-bar form #popup {
+  position: absolute;
+  z-index: 2;
+  transform: translateY(100%);
+  background-color: rgb(255, 250, 205);
+  padding: 3px 5px;
+  margin-top: 5px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  animation: fade 3s forwards 0s 1 linear;
+}
+@keyframes fade {
+  0% {
+    opacity: 100%;
+    background-color: rgb(255, 104, 104);
+  }
+  10% {
+    opacity: 100%;
+    background-color: rgb(255, 104, 104);
+  }
+  60% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
 }
 #search-bar form #city-submit {
   background: #000;
@@ -135,6 +164,10 @@ body {
   border-radius: 50%;
   color: rgb(255, 233, 194);
   padding-left: 5px;
+}
+#current-weather .temp-unfocus:hover {
+  font-weight: bold;
+  color: rgb(255, 214, 144);
 }
 #current-weather #description {
   justify-self: start;
