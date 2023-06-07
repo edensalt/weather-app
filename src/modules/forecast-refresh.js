@@ -96,11 +96,14 @@ const RefreshForecast = async function (city) {
     const sunrise = document.querySelector(`#forecast-risetime-${i}`);
     const sunset = document.querySelector(`#forecast-settime-${i}`);
 
-    date.innerHTML = "..."
-    hl.innerHTML = "...";
-    description.innerHTML = "...";
-    sunrise.innerHTML = "...";
-    sunset.innerHTML = "...";
+    const textLoad = `<div class="text-loading"><span class="text-load dot-1">.</span><span class="text-load dot-2">.</span><span class="text-load dot-3">.</span></div>`
+
+
+    date.innerHTML = textLoad;
+    hl.innerHTML = textLoad;
+    description.innerHTML = textLoad;
+    sunrise.innerHTML = textLoad;
+    sunset.innerHTML = textLoad;
 
 
 

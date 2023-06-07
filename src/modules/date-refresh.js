@@ -48,8 +48,11 @@ const RefreshCurrentDate = async function (city) {
   const dayTime = document.querySelector("#day-time");
   const date = document.querySelector("#date");
 
-  dayTime.innerHTML = "...";
-  date.innerHTML = "...";
+  const textLoad = `<div class="text-loading"><span class="text-load dot-1">.</span><span class="text-load dot-2">.</span><span class="text-load dot-3">.</span></div>`
+
+
+  dayTime.innerHTML = textLoad;
+  date.innerHTML = textLoad;
 
   getWeather(city)
     .then((value) => {

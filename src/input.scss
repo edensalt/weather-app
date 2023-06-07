@@ -37,6 +37,7 @@ body {
   margin: 0;
 }
 
+
 .header {
   width: 100%;
   background-color: rgb(176, 216, 159);
@@ -114,7 +115,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 128px;
+    min-width: 128px;
+    max-width: 128px;
+    min-height: 128px;
+    max-height: 128px;
   }
 
   #temp {
@@ -235,4 +239,57 @@ body {
     column-gap: 10px;
     padding: 5px 0;
   }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.loading {
+  animation: rotate 3s infinite linear;
+}
+
+@keyframes bounce-dot {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20%);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.text-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.text-load {
+  display: inline-block;
+  font-size: inherit;
+  animation: bounce-dot 1s infinite linear;
+}
+
+.dot-1 {
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  animation-delay: 0.2s;
+}
+
+.dot-3 {
+  animation-delay: 0.4s;
 }
