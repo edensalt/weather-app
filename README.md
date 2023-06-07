@@ -2,6 +2,8 @@
 
 Weather app for the <a href="https://www.theodinproject.com/lessons/node-path-javascript-weather-app">Odin Project: JavaScript course</a>
 
+<img src="./readme_images/app.png" alt="screenshot of weather app">
+
 ## Skills demonstrated
 
 - API requests

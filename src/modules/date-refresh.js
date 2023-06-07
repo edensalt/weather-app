@@ -64,7 +64,7 @@ const RefreshCurrentDate = async function (city) {
     })
     .catch((error) => {
       temp.innerHTML = `Error: ${error}`;
-      console.log(error);
+      console.debug(error);
     });
 };
 
