@@ -3,6 +3,10 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+body {
+  background-color: rgb(247, 251, 255);
+}
+
 input,
 button {
   /* Resetting border, padding, and background styles */
@@ -80,9 +84,7 @@ body {
 #current {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
 }
 
 #current-weather {
@@ -115,23 +117,22 @@ body {
   display: flex;
   flex-direction: row;
   align-self: flex-start;
+  padding-top: 5px;
 }
 #current-weather #fahrenheit {
-  font-size: 2rem;
-  width: 48px;
-  height: 48px;
+  font-size: 3rem;
+  font-weight: bold;
 }
 #current-weather #celsius {
-  font-size: 2rem;
+  font-size: 3rem;
   border-radius: 50%;
   color: rgb(255, 233, 194);
-  width: 48px;
-  height: 48px;
+  padding-left: 5px;
 }
 #current-weather #description {
   justify-self: start;
   align-self: center;
-  grid-area: 2/1/3/3;
+  padding-left: 5px;
 }
 
 #current-date {
@@ -154,7 +155,53 @@ body {
 #forecast {
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  text-align: center;
+}
+#forecast .forecast-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 5px;
+  min-width: 200px;
+}
+#forecast h3 {
+  border: solid rgb(255, 233, 194) 1px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  width: 100%;
+}
+#forecast .full-forecast {
+  width: 100%;
+  padding: 10px;
+  border: solid rgb(255, 233, 194) 1px;
+  border-radius: 5px;
+  background-color: white;
+}
+#forecast .forecast-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#forecast .forecast-display .icon {
+  height: 64px;
+  width: 64px;
+  margin: 5px 0;
+}
+#forecast .details {
+  padding: 5px 0;
+}
+#forecast .low {
+  color: gray;
+}
+#forecast .sunrise,
+#forecast .sunset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  padding: 5px 0;
 }
 
 /*# sourceMappingURL=output.css.map */
