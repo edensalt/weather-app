@@ -24,6 +24,10 @@ Weather app for the <a href="https://www.theodinproject.com/lessons/node-path-ja
 
 <img src="./readme_images/change-temp.gif" alt="changing temperature measurement">
 
+- Ghost loaders while fetching data
+
+<img src="./readme_images/loaders.gif" alt="ghost loaders">
+
 - Receive an error if the city entered does not exist.
 
 <img src="./readme_images/error-message.gif" alt="error message">
