@@ -9,8 +9,7 @@ const getWeather = async function (city) {
   while (!data || error) {
     try {
       const response = await fetch(
-        `https://api.weatherapi.com/v1/forecast.json?key=830c878837d444b58d1161321230506&q=${city}&days=3&aqi=no`,
-        { mode: "cors" }
+        `https://api.weatherapi.com/v1/forecast.json?key=830c878837d444b58d1161321230506&q=${city}&days=3&aqi=no`
       );
       data = await response.json()
       if (data.error) {
