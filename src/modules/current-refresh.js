@@ -1,5 +1,6 @@
 import getWeather from "./weather-data";
-import load from "../images/load.png"
+import load from "../images/load.png";
+import GenerateButtons from "../components/buttons";
 
 const CurrentWeatherLayout = async function () {
   const parent = document.querySelector("#current-weather");
@@ -22,14 +23,6 @@ const CurrentWeatherLayout = async function () {
   const buttons = document.createElement("div");
   buttons.setAttribute("id", "temp-btns");
 
-  const fahrenheit = document.createElement("button");
-  fahrenheit.setAttribute("id", "fahrenheit");
-  fahrenheit.innerHTML = "°F";
-
-  const celsius = document.createElement("button");
-  celsius.setAttribute("id", "celsius");
-  celsius.innerHTML = "°C";
-
   const description = document.createElement("div");
   description.setAttribute("id", "description");
 
@@ -38,8 +31,7 @@ const CurrentWeatherLayout = async function () {
   icon.appendChild(img);
   parent.appendChild(endInfo);
   endInfo.appendChild(buttons);
-  buttons.appendChild(fahrenheit);
-  buttons.appendChild(celsius);
+  GenerateButtons();
   endInfo.appendChild(description);
 };
 
@@ -50,7 +42,7 @@ const RefreshCurrentWeather = async function (city) {
   const temp = document.querySelector("#temp");
   const description = document.querySelector("#description");
 
-  const textLoad = `<div class="text-loading"><span class="text-load dot-1">.</span><span class="text-load dot-2">.</span><span class="text-load dot-3">.</span></div>`
+  const textLoad = `<div class="text-loading"><span class="text-load dot-1">.</span><span class="text-load dot-2">.</span><span class="text-load dot-3">.</span></div>`;
 
   temp.innerHTML = textLoad;
   description.innerHTML = textLoad;

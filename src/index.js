@@ -7,7 +7,7 @@ import "./output.css";
 function setContentParent() {
   const div = document.createElement("div");
   div.setAttribute("id", "parent");
-
+  div.setAttribute("temp", "fahrenheit");
   return div;
 }
 
